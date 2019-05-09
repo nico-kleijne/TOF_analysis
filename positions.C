@@ -44,7 +44,7 @@ void time_plot(TString filename, TH1D * hist, double * mean, double * stddev){
      myfile >> trash;
      myfile >> temp1;
      myfile >> temp2;
-     hist -> Fill(temp2/a2);//Convert from ADC to time.
+     if(temp1/a1!=0) hist -> Fill(temp1/a1);//Convert from ADC to time.
      if( myfile.eof() ) break;
    };
       
@@ -71,7 +71,7 @@ int positions(){
 		filename = "data/positions/1G" + ToString(i+16) + "_XCAL_" + ToString(50+i*25) + ".dat";
 		pos[i] = 50+i*25;//Positions
 		dpos[i] = 0.5;//Position uncertainty
-		histos[i] = new TH1D("hist_" + ToString(i), "i", 100, 0, 0.75/a2);//Initialize the histogram
+		histos[i] = new TH1D("hist_" + ToString(i), "hist_" + ToString(i), 100, 0, 2/a1);//Initialize the histogram
 		time_plot(filename, histos[i], &mean[i], &stddev[i]);
 		cout << "mean " << mean[i] <<" stddev " << stddev[i] << endl;
 		canv[i] = new TCanvas ("c_" + ToString(i), "c_" + ToString(i), 1);//Draw the histogram
