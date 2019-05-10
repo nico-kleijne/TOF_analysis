@@ -76,7 +76,7 @@ int resolution(){
 		canv[i][1][0] = new TCanvas("c_"+ToString(i)+"_1_0", "c_"+ToString(i)+"_1_0", 1);
 		filename = "data/resolutions/2L" + ToString(i+1) + "_fine_tcal12_" + ToString(50*(i+1)) + "_100.dat";
 		time_plot(filename, histos[i][1][0], &mean[i][1][0], &stddev[i][1][0], 0);
-		cout << "Pos: " << ToString(50*(i+1)) << "Thres: 100 Diff: 12 " << stddev[i][1][0] << endl;
+		cout << "Pos: " << ToString(50*(i+1)) << " Thres: 100 Diff: 12 " << stddev[i][1][0] << endl;
 		canv[i][1][0] -> cd();
 		histos[i][1][0] -> Draw();
 		}
@@ -86,7 +86,7 @@ int resolution(){
 		canv[i][1][1] = new TCanvas("c_"+ToString(i)+"_1_1", "c_"+ToString(i)+"_1_1", 1);
 		filename = "data/resolutions/2L" + ToString(i+1) + "_fine_tcal12_" + ToString(50*(i+1)) + "_100.dat";
 		time_plot(filename, histos[i][1][1], &mean[i][1][1], &stddev[i][1][1], 1);
-		cout << "Pos: " << ToString(50*(i+1)) << "Thres: 100 Diff: 13 " << stddev[i][1][1] << endl;
+		cout << "Pos: " << ToString(50*(i+1)) << " Thres: 100 Diff: 13 " << stddev[i][1][1] << endl;
 		canv[i][1][1] -> cd();
 		histos[i][1][1] -> Draw();
 		}
@@ -96,7 +96,7 @@ int resolution(){
 		canv[i][0][0] = new TCanvas("c_"+ToString(i)+"_0_0", "c_"+ToString(i)+"_0_0", 1);
 		filename = "data/resolutions/2L" + ToString(i+5) + "_fine_tcal12_" + ToString(50*(i+1)) + "_50.dat";
 		time_plot(filename, histos[i][0][0], &mean[i][0][0], &stddev[i][0][0], 0);
-		cout << "Pos: " << ToString(50*(i+1)) << "Thres: 50 Diff: 12 " << stddev[i][0][0] << endl;
+		cout << "Pos: " << ToString(50*(i+1)) << " Thres: 50 Diff: 12 " << stddev[i][0][0] << endl;
 		canv[i][0][0] -> cd();
 		histos[i][0][0] -> Draw();
 		}
@@ -106,7 +106,7 @@ int resolution(){
 		canv[i][0][1] = new TCanvas("c_"+ToString(i)+"_0_1", "c_"+ToString(i)+"_0_1", 1);
 		filename = "data/resolutions/2L" + ToString(i+5) + "_fine_tcal12_" + ToString(50*(i+1)) + "_50.dat";
 		time_plot(filename, histos[i][0][1], &mean[i][0][1], &stddev[i][0][1], 1);
-		cout << "Pos: " << ToString(50*(i+1)) << "Thres: 50 Diff: 13 " << stddev[i][0][1] << endl;
+		cout << "Pos: " << ToString(50*(i+1)) << " Thres: 50 Diff: 13 " << stddev[i][0][1] << endl;
 		canv[i][0][1] -> cd();
 		histos[i][0][1] -> Draw();
 		}
@@ -116,7 +116,7 @@ int resolution(){
 		canv[i][2][0] = new TCanvas("c_"+ToString(i)+"_2_0", "c_"+ToString(i)+"_2_0", 1);
 		filename = "data/resolutions/2M" + ToString(i+1) + "_fine_tcal12_" + ToString(50*(i+1)) + "_150.dat";
 		time_plot(filename, histos[i][2][0], &mean[i][2][0], &stddev[i][2][0], 0);
-		cout << "Pos: " << ToString(50*(i+1)) << "Thres: 150 Diff: 12 " << stddev[i][2][0] << endl;
+		cout << "Pos: " << ToString(50*(i+1)) << " Thres: 150 Diff: 12 " << stddev[i][2][0] << endl;
 		canv[i][2][0] -> cd();
 		histos[i][2][0] -> Draw();
 		}
@@ -126,30 +126,57 @@ int resolution(){
 		canv[i][2][1] = new TCanvas("c_"+ToString(i)+"_2_1", "c_"+ToString(i)+"_2_1", 1);
 		filename = "data/resolutions/2M" + ToString(i+1) + "_fine_tcal12_" + ToString(50*(i+1)) + "_150.dat";
 		time_plot(filename, histos[i][2][1], &mean[i][2][1], &stddev[i][2][1], 1);
-		cout << "Pos: " << ToString(50*(i+1)) << "Thres: 150 Diff: 13 " << stddev[i][2][1] << endl;
+		cout << "Pos: " << ToString(50*(i+1)) << " Thres: 150 Diff: 13 " << stddev[i][2][1] << endl;
 		canv[i][2][1] -> cd();
 		histos[i][2][1] -> Draw();
 		}
 		
-	for (int i = 0; i < 2; i++){
+	for (int i = 0; i < 4; i++){
 		histos[i][2][2] = new TH1D("histo_"+ToString(i)+"_2_2", "histo_"+ToString(i)+"_2_2", 100, 0, 100);
 		canv[i][2][2] = new TCanvas("c_"+ToString(i)+"_2_2", "c_"+ToString(i)+"_2_2", 1);
 		filename = "data/resolutions/2M" + ToString(i+5) + "_fine_tcal23_" + ToString(50*(i+1)) + "_150.dat";
 		time_plot(filename, histos[i][2][2], &mean[i][2][2], &stddev[i][2][2], 0);
-		cout << "Pos: " << ToString(50*(i+1)) << "Thres: 150 Diff: 23 " << stddev[i][2][2] << endl;
+		cout << "Pos: " << ToString(50*(i+1)) << " Thres: 150 Diff: 23 " << stddev[i][2][2] << endl;
 		canv[i][2][2] -> cd();
 		histos[i][2][2] -> Draw();
 		}
 		
-		
-		
-		
-		
-		
-		
-		
 	for (int i = 0; i < 2; i++){
-		for (int j = 2; j < 3; j++){
+		histos[i][1][2] = new TH1D("histo_"+ToString(i)+"_1_2", "histo_"+ToString(i)+"_1_2", 100, 0, 100);
+		canv[i][1][2] = new TCanvas("c_"+ToString(i)+"_1_2", "c_"+ToString(i)+"_1_2", 1);
+		filename = "data/resolutions/2M" + ToString(i+9) + "_fine_tcal23_" + ToString(50*(i+1)) + "_100.dat";
+		time_plot(filename, histos[i][1][2], &mean[i][1][2], &stddev[i][1][2], 0);
+		cout << "Pos: " << ToString(50*(i+1)) << " Thres: 100 Diff: 23 " << stddev[i][2][2] << endl;
+		canv[i][1][2] -> cd();
+		histos[i][1][2] -> Draw();
+		}
+	
+	for (int i = 2; i < 4; i++){
+		histos[i][1][2] = new TH1D("histo_"+ToString(i)+"_1_2", "histo_"+ToString(i)+"_1_2", 100, 0, 100);
+		canv[i][1][2] = new TCanvas("c_"+ToString(i)+"_1_2", "c_"+ToString(i)+"_1_2", 1);
+		filename = "data/resolutions/2G" + ToString(i-1) + "_fine_tcal23_" + ToString(50*(i+1)) + "_100.dat";
+		time_plot(filename, histos[i][1][2], &mean[i][1][2], &stddev[i][1][2], 0);
+		cout << "Pos: " << ToString(50*(i+1)) << " Thres: 100 Diff: 23 " << stddev[i][1][2] << endl;
+		canv[i][1][2] -> cd();
+		histos[i][1][2] -> Draw();
+		}
+		
+	for (int i = 0; i < 4; i++){
+		histos[i][0][2] = new TH1D("histo_"+ToString(i)+"_0_2", "histo_"+ToString(i)+"_0_2", 100, 0, 100);
+		canv[i][0][2] = new TCanvas("c_"+ToString(i)+"_0_2", "c_"+ToString(i)+"_0_2", 1);
+		filename = "data/resolutions/2G" + ToString(i+3) + "_fine_tcal23_" + ToString(50*(i+1)) + "_50.dat";
+		time_plot(filename, histos[i][0][2], &mean[i][0][2], &stddev[i][0][2], 0);
+		cout << "Pos: " << ToString(50*(i+1)) << " Thres: 50 Diff: 23 " << stddev[i][0][2] << endl;
+		canv[i][0][2] -> cd();
+		histos[i][0][2] -> Draw();
+		}		
+		
+		cout << "____________________________________________" << endl;
+		
+		
+		
+	for (int i = 0; i < 4; i++){
+		for (int j = 0; j < 3; j++){
 			scin_res[i][j][0] = TMath::Sqrt((stddev[i][j][0]*stddev[i][j][0]+stddev[i][j][1]*stddev[i][j][1]-stddev[i][j][2]*stddev[i][j][2]-sp_res*sp_res)/2);
 			scin_res[i][j][1] = TMath::Sqrt((stddev[i][j][2]*stddev[i][j][2]+stddev[i][j][0]*stddev[i][j][0]-stddev[i][j][1]*stddev[i][j][1]-sp_res*sp_res)/2);
 			scin_res[i][j][2] = TMath::Sqrt((stddev[i][j][1]*stddev[i][j][1]+stddev[i][j][2]*stddev[i][j][2]-stddev[i][j][0]*stddev[i][j][0]-sp_res*sp_res)/2);
