@@ -105,7 +105,7 @@ int TOF(){
 	Double_t Tsr=0, Tdr =0, Xur=0, beta_mur=0;
 	
 	//TString filename = "data/distribution/1V6_barcal3.dat";
-	TString filename = "data/resolutions/2L1_fine_tcal12_50_100.dat";
+	TString filename = "data/resolutions/2L4_fine_tcal12_200_100.dat";
 
 	TH1D * hist_tof = new TH1D("hist_tof", "hist_tof", 350, -20, 50);
 	TH1D * hist_tof_cen = new TH1D("hist_tof_cen", "hist_tof_cen", 1400, -20, 50);
